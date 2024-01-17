@@ -8,6 +8,7 @@
 
 :root {
     --header-padding: 24px; 
+    --white: #eff6ff;
 }
 
 #content {
@@ -23,7 +24,7 @@ header {
     justify-content: space-around;
     align-items: center;
     background-color: #3b82f6;
-    color: #eff6ff;
+    color: var(--white);
     height: 80px;
     gap: 100px;
 }
@@ -36,4 +37,20 @@ ul.nav {
 
 header .logo {
     font-size: 2rem;
+}
+
+.main-body {
+    width: clamp(500px, 75%, 750px);
+    margin: 48px auto;
+    background-color: #03071288;
+    padding: 16px;
+    border-radius: 5px;
+    border: 5px solid var(--white);
+}
+
+p.main {
+    color: var(--white);
+    font-size: 2rem;
+    text-align: center;
+    margin: 16px;
 }
