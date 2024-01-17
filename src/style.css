@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --header-padding: 24px; 
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    font-family: "Roboto", sans-serif;
+    height: 100vh;
+    background: url("https://images.unsplash.com/photo-1476897017502-219c9169bd6f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #3b82f6;
+    color: #eff6ff;
+    height: 80px;
+    gap: 100px;
+}
+
+ul.nav {
+    list-style-type: none;
+    display: flex;
+    gap: 24px;
+}
+
+header .logo {
+    font-size: 2rem;
+}
