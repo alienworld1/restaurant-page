@@ -94,3 +94,25 @@ footer {
     text-align: center;
     padding: 24px;
 }
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 32px;
+}
+
+.card {
+    background-color: var(--white);
+    padding: 12px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.card:hover {
+    border: 5px solid var(--header-footer-background);
+}
+
+.card p {
+    margin-top: 12px;
+    font-size: 1.25rem;
+}
