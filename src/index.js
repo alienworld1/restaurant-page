@@ -1,5 +1,6 @@
 import { mainBody, bodyParagraph, image } from "./PageElements";
 import menu from "./menu";
+import contact from "./contact";
 import "./style.css";
 import waterImage from "./Images/water-glass.jpg";
 
