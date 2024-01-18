@@ -24,8 +24,17 @@ const NavSetter = (function(){
         return nav;
     }
 
+    function setTab(linkID, body) {
+        const link = document.getElementById(linkID);
+
+        link.addEventListener("click", () => {
+            changeMain(body);
+        });
+    }
+
     return {
         createNavigationBar,
+        setTab,
     }
 })();
 
@@ -97,11 +106,14 @@ function footer() {
     return footer;
 }
 
-//TODO: Credit the background image
+const homePage = home();
+const menuPage = menu();
 
 const content = document.querySelector("#content");
 content.appendChild(header());
-content.appendChild(main(home()));
-content.appendChild(footer());
 
-changeMain(menu());
+NavSetter.setTab("Home", homePage);
+NavSetter.setTab("Menu", menuPage);
+
+content.appendChild(main(homePage));
+content.appendChild(footer());
