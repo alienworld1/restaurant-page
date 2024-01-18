@@ -99,6 +99,7 @@ footer {
     display: flex;
     flex-wrap: wrap;
     margin: 32px;
+    justify-content: space-around;
 }
 
 .card {
