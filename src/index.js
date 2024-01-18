@@ -1,4 +1,5 @@
 import { mainBody, bodyParagraph, image } from "./PageElements";
+import menu from "./menu";
 import "./style.css";
 import waterImage from "./Images/water-glass.jpg";
 
@@ -6,6 +7,7 @@ const NavSetter = (function(){
     function createNavigationLink(textContent) {
         const link = document.createElement("li");
         link.textContent = textContent;
+        link.id = textContent;
 
         return link;
     }
@@ -47,8 +49,7 @@ function header() {
     return header;
 }
 
-function main() {
-    const main = document.createElement("main");
+function home() {
     const pageBody = mainBody();
 
     const waterGlass = {
@@ -72,8 +73,21 @@ function main() {
     pageBody.appendChild(captionParagraph);
     pageBody.appendChild(descriptionParagraph);
 
-    main.appendChild(pageBody);
+    return pageBody;
+}
+
+function main(mainContent) {
+    const main = document.createElement("main");
+    main.appendChild(mainContent);
+
     return main;
+}
+
+function changeMain(newContent) {
+    const main = document.querySelector("main");
+
+    main.removeChild(main.firstChild);
+    main.appendChild(newContent);
 }
 
 function footer() {
@@ -87,5 +101,5 @@ function footer() {
 
 const content = document.querySelector("#content");
 content.appendChild(header());
-content.appendChild(main());
+content.appendChild(main(home()));
 content.appendChild(footer());
