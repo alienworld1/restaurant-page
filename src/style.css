@@ -9,6 +9,7 @@
 :root {
     --header-padding: 24px; 
     --white: #eff6ff;
+    --header-footer-background: #1e40af;
 }
 
 #content {
@@ -17,15 +18,16 @@
     font-family: "Roboto", sans-serif;
     height: 100vh;
     background: url("https://images.unsplash.com/photo-1476897017502-219c9169bd6f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    justify-content: space-between;
 }
 
 header {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: #1e40af;
+    background-color: var(--header-footer-background);
     color: var(--white);
-    height: 80px;
+    height:75px;
     gap: 100px;
 }
 
@@ -71,8 +73,15 @@ figure figcaption {
     padding: 12px;
 }
 
-figcaption a,
-figcaption a:hover,
-figcaption a:visited {
+a,
+a:hover,
+a:visited {
     color: var(--white);
+}
+
+footer {
+    background-color: var(--header-footer-background);
+    color: var(--white);
+    text-align: center;
+    padding: 24px;
 }

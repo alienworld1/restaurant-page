@@ -119,8 +119,16 @@ function main() {
     return main;
 }
 
+function footer() {
+    const footer = document.createElement("footer");
+    footer.innerHTML = 'Background by <a href="https://unsplash.com/@liodp?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Lionello DelPiccolo</a> on <a href="https://unsplash.com/photos/blue-ocean-wave-qEswHvOmi1c?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>';
+
+    return footer;
+}
+
 //TODO: Credit the background image
 
 const content = document.querySelector("#content");
 content.appendChild(header());
 content.appendChild(main());
+content.appendChild(footer());
