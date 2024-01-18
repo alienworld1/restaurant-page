@@ -1,6 +1,7 @@
 import { bodyParagraph, mainBody, image } from "./PageElements";
 import evian from "./Images/evian-bottle.jpg";
 import dasani from "./Images/dasani-bottle.png";
+import aquafina from "./Images/Aquafina.png";
 
 function card(imageSource, name) {
     const card = document.createElement("div");
@@ -38,9 +39,11 @@ export default function menu() {
     
     const evianCard = card(evian, "Evian");
     const dasaniCard = card(dasani, "Dasani");
+    const aquafinaCard = card(aquafina, "Aquafina");
 
     cardContainer.appendChild(evianCard);
     cardContainer.appendChild(dasaniCard);
+    cardContainer.appendChild(aquafinaCard);
 
     main.appendChild(headline);
     main.appendChild(cardContainer);

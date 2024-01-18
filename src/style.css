@@ -100,17 +100,14 @@ footer {
     flex-wrap: wrap;
     margin: 32px;
     justify-content: space-around;
+    gap: 24px;
 }
 
 .card {
     background-color: var(--white);
-    padding: 12px;
+    padding: 16px;
     text-align: center;
     border-radius: 5px;
-}
-
-.card:hover {
-    border: 5px solid var(--header-footer-background);
 }
 
 .card p {
