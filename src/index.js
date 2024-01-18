@@ -36,6 +36,8 @@ function image(imageDetails, credit) {
     const figureCaption = document.createElement("figcaption");
     figureCaption.innerHTML = credit;
 
+    figure.style.width = `${thisImage.width}px`;
+
     figure.appendChild(thisImage);
     figure.appendChild(figureCaption);
 
