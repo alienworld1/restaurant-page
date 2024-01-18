@@ -109,12 +109,14 @@ function footer() {
 
 const homePage = home();
 const menuPage = menu();
+const contactPage = contact();
 
 const content = document.querySelector("#content");
 content.appendChild(header());
 
 NavSetter.setTab("Home", homePage);
 NavSetter.setTab("Menu", menuPage);
+NavSetter.setTab("Contact", contactPage);
 
 content.appendChild(main(homePage));
 content.appendChild(footer());
