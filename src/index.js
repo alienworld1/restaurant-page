@@ -1,4 +1,5 @@
 import "./style.css";
+import waterImage from "./Images/water-glass.jpg";
 
 const NavSetter = (function(){
     function createNavigationLink(textContent) {
@@ -24,6 +25,26 @@ const NavSetter = (function(){
         createNavigationBar,
     }
 })();
+
+function image(imageDetails, credit) {
+    const thisImage = new Image();
+    thisImage.src = imageDetails.source;
+    thisImage.width = imageDetails.width;
+    thisImage.height = imageDetails.height;
+
+    const figure = document.createElement("figure");
+    const figureCaption = document.createElement("figcaption");
+    figureCaption.innerHTML = credit;
+
+    figure.appendChild(thisImage);
+    figure.appendChild(figureCaption);
+
+    return {
+        figure,
+        image: thisImage,
+    };
+}
+
 
 function header() {
     const header = document.createElement("header");
@@ -70,6 +91,16 @@ const MainPage = (function(){
 function main() {
     const main = document.createElement("main");
     const mainBody = MainPage.mainBody();
+
+    const waterGlass = {
+        source: waterImage,
+        width: 300,
+        height: 400,
+    };
+
+    const waterGlassImage = image(waterGlass, 'Photo by <a href="https://unsplash.com/@kobuagency?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">KOBU Agency</a> on <a href="https://unsplash.com/photos/clear-drinking-glass-on-gray-surface-TWIRIAizZFU?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>');
+
+    mainBody.appendChild(waterGlassImage.figure);
 
     const caption = "<strong>Not all water is created the same!</strong>";
 
