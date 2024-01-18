@@ -13,20 +13,23 @@ function bodyParagraph(innerHTML) {
     return paragraph;
 }
 
-function image(imageDetails, credit) {
+function image(imageDetails, credit=null) {
     const thisImage = new Image();
     thisImage.src = imageDetails.source;
     thisImage.width = imageDetails.width;
     thisImage.height = imageDetails.height;
 
     const figure = document.createElement("figure");
-    const figureCaption = document.createElement("figcaption");
-    figureCaption.innerHTML = credit;
-
-    figure.style.width = `${thisImage.width}px`;
-
     figure.appendChild(thisImage);
-    figure.appendChild(figureCaption);
+
+    if (credit) {
+        const figureCaption = document.createElement("figcaption");
+        figureCaption.innerHTML = credit;
+    
+        figure.style.width = `${thisImage.width}px`;
+    
+        figure.appendChild(figureCaption);    
+    }
 
     return {
         figure,

@@ -103,3 +103,5 @@ const content = document.querySelector("#content");
 content.appendChild(header());
 content.appendChild(main(home()));
 content.appendChild(footer());
+
+changeMain(menu());
