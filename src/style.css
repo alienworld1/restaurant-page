@@ -37,6 +37,15 @@ ul.nav {
     gap: 24px;
 }
 
+ul.nav li:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+ul.nav li:active {
+    color: #d1d5db;
+}
+
 header .logo {
     font-size: 2rem;
 }
